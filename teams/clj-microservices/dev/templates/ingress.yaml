@@ -21,7 +21,11 @@ spec:
   ingressClassName: alb
 {{ end }}  
   rules:
-  - host:   
+{{ if not (eq .Values.spec.ingress.host "dev.example.com") }}
+  - host: frontend-service.{{ .Values.spec.ingress.host }}
+{{ else }}
+  - host:  
+{{ end }}   
     http:
       paths:
       - path: /
