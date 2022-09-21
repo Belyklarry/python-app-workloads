@@ -37,9 +37,9 @@ metadata:
   name: newsfeed-service
   namespace: clj-microservices
 spec:
-  type: LoadBalancer
   selector:
     app: newsfeed
+    app: frontend
   ports:
     - protocol: TCP
       port: 8090
