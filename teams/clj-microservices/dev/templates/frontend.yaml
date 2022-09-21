@@ -29,8 +29,6 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: APP_PORT
-          value: 8080
         - name: STATIC_URL
           value: http://0.0.0.0:8000/
         - name: QUOTE_SERVICE_URL
