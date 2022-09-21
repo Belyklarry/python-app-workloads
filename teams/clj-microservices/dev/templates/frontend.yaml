@@ -5,15 +5,21 @@ metadata:
   namespace: clj-microservices
   labels:
     app: frontend
+    app: newsfeed
+    app: quotes
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: frontend
+      app: newsfeed
+      app: quotes
   template:
     metadata:
       labels:
         app: frontend
+        app: newsfeed
+        app: quotes
     spec:
       containers:
       - name: frontend
