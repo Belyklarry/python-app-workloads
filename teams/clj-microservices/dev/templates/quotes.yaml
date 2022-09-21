@@ -5,15 +5,18 @@ metadata:
   namespace: clj-microservices
   labels:
     app: quotes
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: quotes
+      app: frontend
   template:
     metadata:
       labels:
         app: quotes
+        app: frontend
     spec:
       containers:
       - name: quotes
