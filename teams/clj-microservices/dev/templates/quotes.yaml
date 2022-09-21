@@ -4,19 +4,16 @@ metadata:
   name: quotes-deployment
   namespace: clj-microservices
   labels:
-    app: quotes
-    app: frontend
+    app: clj-microservices
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: quotes
-      app: frontend
+      app: clj-microservices
   template:
     metadata:
       labels:
-        app: quotes
-        app: frontend
+        app: clj-microservices
     spec:
       containers:
       - name: quotes
@@ -41,8 +38,7 @@ metadata:
   namespace: clj-microservices
 spec:
   selector:
-    app: quotes
-    app: frontend
+    app: clj-microservices
   ports:
     - protocol: TCP
       port: 8070
