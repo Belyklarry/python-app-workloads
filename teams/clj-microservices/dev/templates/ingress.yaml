@@ -21,18 +21,14 @@ spec:
   ingressClassName: alb
 {{ end }}  
   rules:
-{{ if not (eq .Values.spec.ingress.host "dev.example.com") }}
-  - host: guestbook-ui.{{ .Values.spec.ingress.host }}
-{{ else }}
-  - host:  
-{{ end }}  
+  - host:   
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: guestbook-ui
+            name: frontend-service
             port: 
               number: 80
         
