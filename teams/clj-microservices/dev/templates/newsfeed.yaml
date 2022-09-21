@@ -4,19 +4,16 @@ metadata:
   name: newsfeed-deployment
   namespace: clj-microservices
   labels:
-    app: newsfeed
-    app: frontend
+    app: clj-microservices
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: newsfeed
-      app: frontend
+      clj-microservices
   template:
     metadata:
       labels:
-        app: newsfeed
-        app: frontend
+        clj-microservices
     spec:
       containers:
       - name: newsfeed
@@ -41,8 +38,7 @@ metadata:
   namespace: clj-microservices
 spec:
   selector:
-    app: newsfeed
-    app: frontend
+    clj-microservices
   ports:
     - protocol: TCP
       port: 8090
