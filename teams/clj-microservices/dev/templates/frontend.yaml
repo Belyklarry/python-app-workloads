@@ -4,22 +4,16 @@ metadata:
   name: frontend-deployment
   namespace: clj-microservices
   labels:
-    app: frontend
-    app: newsfeed
-    app: quotes
+    clj-microservices
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
-      app: newsfeed
-      app: quotes
+      clj-microservices
   template:
     metadata:
       labels:
-        app: frontend
-        app: newsfeed
-        app: quotes
+        clj-microservices
     spec:
       containers:
       - name: frontend
@@ -52,6 +46,4 @@ spec:
   - port: 80
     targetPort: 8080
   selector:
-    app: frontend
-    app: newsfeed
-    app: quotes
+    clj-microservices
