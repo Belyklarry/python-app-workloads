@@ -49,7 +49,6 @@ metadata:
   name: frontend-service
   namespace: clj-microservices
 spec:
-  type: NodePort
   selector:
     app: frontend
   ports:
