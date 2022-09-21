@@ -9,11 +9,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      clj-microservices
+      app: clj-microservices
   template:
     metadata:
       labels:
-        clj-microservices
+        app: clj-microservices
     spec:
       containers:
       - name: newsfeed
@@ -38,7 +38,7 @@ metadata:
   namespace: clj-microservices
 spec:
   selector:
-    clj-microservices
+    app: clj-microservices
   ports:
     - protocol: TCP
       port: 8090
