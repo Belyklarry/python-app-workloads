@@ -47,3 +47,5 @@ spec:
     targetPort: 8080
   selector:
     app: frontend
+    app: newsfeed
+    app: quotes
