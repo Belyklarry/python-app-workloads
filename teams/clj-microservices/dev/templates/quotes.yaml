@@ -40,7 +40,6 @@ metadata:
   name: quotes-service
   namespace: clj-microservices
 spec:
-  type: LoadBalancer
   selector:
     app: quotes
     app: frontend
