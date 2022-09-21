@@ -29,10 +29,6 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: QUOTE_SERVICE_URL
-          value: ac113344f0e1346bd9a6f4b5d30d37fa-963561801.af-south-1.elb.amazonaws.com:8070
-        - name: NEWSFEED_SERVICE_URL
-          value: a01a9613e8cc0430d8f246a652ff5671-1777613795.af-south-1.elb.amazonaws.com:8090
         - name: NEWSFEED_SERVICE_TOKEN
           valueFrom:
             secretKeyRef:
