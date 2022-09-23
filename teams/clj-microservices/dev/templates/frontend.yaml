@@ -30,9 +30,9 @@ spec:
         - containerPort: 8080
         env:
         - name: QUOTE_SERVICE_URL
-          value: quote-service.clj-microservices.svc.cluster.local:8070
+          value: quote-service.clj-microservices.svc.cluster.local:8080
         - name: NEWSFEED_SERVICE_URL
-          value: newsfeed-service.clj-microservices.svc.cluster.local:8090
+          value: newsfeed-service.clj-microservices.svc.cluster.local:8080
         - name: NEWSFEED_SERVICE_TOKEN
           valueFrom:
             secretKeyRef:
