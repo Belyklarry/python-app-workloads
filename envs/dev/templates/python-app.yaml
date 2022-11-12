@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: clj-microservices
+  name: python-app
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: python-app
   destination:
-    namespace: clj-microservices
+    namespace: python-app
     server: {{ .Values.spec.destination.server }}
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
-    path: teams/clj-microservices/dev
+    path: teams/python-app/dev
     helm:
       parameters:
       - name: spec.ingress.host

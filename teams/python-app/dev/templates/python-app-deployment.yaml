@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: quotes-deployment
-  namespace: clj-microservices
+  name: python-app
   labels:
-    app: clj-microservices
+    app: python-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: clj-microservices
+      app: python-app
   template:
     metadata:
       labels:
-        app: clj-microservices
+        app: python-app
     spec:
       containers:
-      - name: quotes
-        image: belyklarry/clj-quotes:latest
+      - name: python-app
+        image: belyklarry/python-app:latest
         imagePullPolicy: IfNotPresent
         resources:
           requests:
@@ -27,19 +26,17 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8080
-        
----
+        - containerPort: 8000
 
+---      
 apiVersion: v1
 kind: Service
 metadata:
-  name: quotes-service
-  namespace: clj-microservices
+  name: python-app-service
+  namespace: python-app
 spec:
-  selector:
-    app: clj-microservices
   ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
+  - port: 80
+    targetPort: 8000
+  selector:
+    app: python-app
