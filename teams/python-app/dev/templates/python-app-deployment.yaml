@@ -27,6 +27,11 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8000
+        env:
+            - name: HOST_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
 
 ---      
 apiVersion: v1
