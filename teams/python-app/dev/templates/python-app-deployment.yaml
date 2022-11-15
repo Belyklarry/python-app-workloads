@@ -17,7 +17,7 @@ spec:
       containers:
       - name: python-app
         image: belyklarry/python-app:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
