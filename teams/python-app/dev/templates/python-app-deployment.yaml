@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: belyklarry/python-app
+        image: belyklarry/python-app:latest
         imagePullPolicy: IfNotPresent
         resources:
           requests:
