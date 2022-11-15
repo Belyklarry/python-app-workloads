@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: belyklarry/python-app
+        image: belyklarry/python-app:latest
         imagePullPolicy: IfNotPresent
         resources:
           requests:
@@ -28,10 +28,10 @@ spec:
         ports:
         - containerPort: 8000
         env:
-            - name: HOST_IP
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.hostIP
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
 
 ---      
 apiVersion: v1
