@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: python-app
+  project: default
   destination:
     namespace: python-app
     server: {{ .Values.spec.destination.server }}
