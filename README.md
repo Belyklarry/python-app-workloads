@@ -1,1 +1,1 @@
-# eks-blueprints-workloads
+# python-app-workloads
